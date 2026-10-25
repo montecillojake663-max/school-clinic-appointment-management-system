@@ -1,0 +1,388 @@
+/* Health Profiles header */
+
+.health-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 134px;
+    margin-bottom: 28px;
+    padding: 30px 32px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 82% 10%,
+            rgba(255, 255, 255, 0.2),
+            transparent 22%
+        ),
+        linear-gradient(135deg, #2563eb, #4f46e5);
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.22);
+}
+
+.health-hero::after {
+    position: absolute;
+    right: -55px;
+    bottom: -100px;
+
+    width: 220px;
+    height: 220px;
+
+    border: 34px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    content: "";
+}
+
+.health-hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.health-hero-icon {
+    display: grid;
+    width: 53px;
+    height: 53px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+
+    color: #2563eb;
+    background: white;
+}
+
+.health-hero-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.health-hero h1 {
+    margin: 0 0 6px;
+
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 780;
+    letter-spacing: -1px;
+}
+
+.health-hero p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+}
+
+/* Add Health Profile button */
+
+.add-health-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: none;
+    border-radius: 11px;
+
+    color: #2563eb;
+    background: white;
+
+    font-weight: 700;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.16);
+}
+
+.add-health-button:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+
+.add-health-button:disabled {
+    color: #94a3b8;
+    background: #e2e8f0;
+    opacity: 0.8;
+}
+
+.add-health-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Summary cards */
+
+.health-summary {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.health-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    min-height: 88px;
+    padding: 17px 19px;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background: white;
+    box-shadow: var(--app-shadow);
+}
+
+.health-summary-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+}
+
+.health-summary-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.health-icon-blue {
+    color: #2563eb;
+    background: #dbeafe;
+}
+
+.health-icon-green {
+    color: #16a34a;
+    background: #dcfce7;
+}
+
+.health-summary-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.health-summary-details span {
+    color: var(--app-muted);
+    font-size: 0.76rem;
+}
+
+.health-summary-details strong {
+    color: var(--app-dark);
+    font-size: 1.45rem;
+}
+
+/* Health Profiles table card */
+
+.health-card {
+    overflow: hidden;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background: white;
+    box-shadow: var(--app-shadow);
+}
+
+.health-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 19px 21px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.health-card-header h2 {
+    margin: 0 0 3px;
+
+    color: var(--app-dark);
+    font-size: 1.03rem;
+    font-weight: 750;
+}
+
+.health-card-header p {
+    margin: 0;
+
+    color: var(--app-muted);
+    font-size: 0.78rem;
+}
+
+/* Student column */
+
+.health-student {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.health-avatar {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    color: #2563eb;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.health-student-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.health-student-details strong {
+    color: #1e293b;
+}
+
+.health-student-details span {
+    color: #94a3b8;
+    font-size: 0.73rem;
+}
+
+/* Medical information */
+
+.medical-text {
+    display: block;
+    max-width: 230px;
+    white-space: normal;
+}
+
+.none-recorded {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* Emergency contact */
+
+.emergency-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.emergency-contact svg {
+    width: 15px;
+    height: 15px;
+    color: #64748b;
+}
+
+/* Update and Delete buttons */
+
+.health-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.health-action-button {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+
+    border-radius: 9px;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.health-action-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.health-action-button:hover {
+    transform: translateY(-2px);
+}
+
+.health-edit {
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.health-edit:hover {
+    color: white;
+    background: #2563eb;
+}
+
+.health-delete {
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    background: #fef2f2;
+}
+
+.health-delete:hover {
+    color: white;
+    background: #dc2626;
+}
+
+/* Empty table */
+
+.health-empty {
+    padding: 55px 20px !important;
+    color: #94a3b8 !important;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .health-hero {
+        align-items: flex-start;
+        min-height: auto;
+        padding: 24px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .health-hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .add-health-button {
+        width: 100%;
+    }
+
+    .health-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .health-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .health-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}

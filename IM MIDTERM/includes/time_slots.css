@@ -1,0 +1,428 @@
+/* Time Slots header */
+
+.time-slots-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 134px;
+    margin-bottom: 28px;
+    padding: 30px 32px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 82% 10%,
+            rgba(255, 255, 255, 0.2),
+            transparent 22%
+        ),
+        linear-gradient(135deg, #2563eb, #4f46e5);
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.22);
+}
+
+.time-slots-hero::after {
+    position: absolute;
+    right: -55px;
+    bottom: -100px;
+
+    width: 220px;
+    height: 220px;
+
+    border: 34px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    content: "";
+}
+
+.time-slots-hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.time-slots-hero-icon {
+    display: grid;
+    width: 53px;
+    height: 53px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+
+    color: #2563eb;
+    background: white;
+}
+
+.time-slots-hero-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.time-slots-hero h1 {
+    margin: 0 0 6px;
+
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 780;
+    letter-spacing: -1px;
+}
+
+.time-slots-hero p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 1rem;
+}
+
+/* Add Time Slot button */
+
+.add-time-slot-button {
+    position: relative;
+    z-index: 1;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: none;
+    border-radius: 11px;
+
+    color: #2563eb;
+    background: white;
+
+    font-weight: 700;
+
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.16);
+}
+
+.add-time-slot-button:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+
+.add-time-slot-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Summary cards */
+
+.time-slot-summary {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.time-slot-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    min-height: 88px;
+    padding: 17px 19px;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background: white;
+    box-shadow: var(--app-shadow);
+}
+
+.time-slot-summary-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+}
+
+.time-slot-summary-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.time-slot-icon-blue {
+    color: #2563eb;
+    background: #dbeafe;
+}
+
+.time-slot-icon-green {
+    color: #16a34a;
+    background: #dcfce7;
+}
+
+.time-slot-icon-red {
+    color: #dc2626;
+    background: #fee2e2;
+}
+
+.time-slot-summary-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.time-slot-summary-details span {
+    color: var(--app-muted);
+    font-size: 0.76rem;
+}
+
+.time-slot-summary-details strong {
+    color: var(--app-dark);
+    font-size: 1.45rem;
+}
+
+/* Time Slots card */
+
+.time-slots-card {
+    overflow: hidden;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background: white;
+    box-shadow: var(--app-shadow);
+}
+
+.time-slots-card-header {
+    padding: 19px 21px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.time-slots-card-header h2 {
+    margin: 0 0 3px;
+
+    color: var(--app-dark);
+    font-size: 1.03rem;
+    font-weight: 750;
+}
+
+.time-slots-card-header p {
+    margin: 0;
+
+    color: var(--app-muted);
+    font-size: 0.78rem;
+}
+
+/* Schedule date */
+
+.slot-date {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.slot-date-icon {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    color: #2563eb;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.slot-date-icon svg {
+    width: 19px;
+    height: 19px;
+}
+
+.slot-date-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.slot-date-details strong {
+    color: #1e293b;
+}
+
+.slot-date-details span {
+    color: #94a3b8;
+    font-size: 0.73rem;
+}
+
+/* Start and end times */
+
+.slot-time {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #475569;
+    white-space: nowrap;
+}
+
+.slot-time svg {
+    width: 15px;
+    height: 15px;
+    color: #64748b;
+}
+
+/* Availability labels */
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 11px;
+
+    border-radius: 30px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.availability::before {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    content: "";
+}
+
+.available {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.available::before {
+    background: #22c55e;
+}
+
+.unavailable {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.unavailable::before {
+    background: #ef4444;
+}
+
+/* Action buttons */
+
+.time-slot-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.time-slot-action-button {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+
+    border-radius: 9px;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.time-slot-action-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.time-slot-action-button:hover {
+    transform: translateY(-2px);
+}
+
+.time-slot-edit {
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.time-slot-edit:hover {
+    color: white;
+    background: #2563eb;
+}
+
+.time-slot-delete {
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    background: #fef2f2;
+}
+
+.time-slot-delete:hover {
+    color: white;
+    background: #dc2626;
+}
+
+/* Availability switch */
+
+.availability-switch {
+    padding: 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 11px;
+
+    background: #f8fafc;
+}
+
+/* Empty table */
+
+.time-slot-empty {
+    padding: 55px 20px !important;
+    color: #94a3b8 !important;
+    text-align: center;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+    .time-slots-hero {
+        align-items: flex-start;
+        min-height: auto;
+        padding: 24px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .time-slots-hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .add-time-slot-button {
+        width: 100%;
+    }
+
+    .time-slot-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .time-slot-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}

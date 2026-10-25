@@ -1,0 +1,475 @@
+/* Dashboard heading */
+
+.dashboard-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+    padding: 30px 32px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 82% 10%,
+            rgba(255, 255, 255, 0.2),
+            transparent 22%
+        ),
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow:
+        0 20px 45px rgba(37, 99, 235, 0.22);
+}
+
+.dashboard-header::after {
+    position: absolute;
+    right: -55px;
+    bottom: -100px;
+
+    width: 220px;
+    height: 220px;
+
+    border: 34px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    content: "";
+}
+
+.dashboard-header h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 6px;
+
+    color: white;
+
+    font-size: 2.2rem;
+    font-weight: 780;
+    letter-spacing: -1px;
+}
+
+.dashboard-header p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* Logged-in user */
+
+.user-card {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 210px;
+    padding: 11px 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.12);
+
+    backdrop-filter: blur(10px);
+}
+
+.user-avatar {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    color: #2563eb;
+    background: white;
+}
+
+.user-avatar svg {
+    width: 21px;
+    height: 21px;
+}
+
+.user-details {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.user-details strong {
+    overflow: hidden;
+
+    color: white;
+
+    font-size: 0.87rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-details span {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.74rem;
+}
+
+/* Statistic cards */
+
+.stat-card {
+    position: relative;
+
+    height: 100%;
+    min-height: 175px;
+    padding: 22px;
+    overflow: hidden;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f9fbff
+        );
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 22px 42px rgba(15, 23, 42, 0.11);
+}
+
+/* Colored line on each card */
+
+.stat-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 4px;
+
+    content: "";
+}
+
+.row > div:nth-child(1) .stat-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            #3b82f6,
+            #60a5fa
+        );
+}
+
+.row > div:nth-child(2) .stat-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #a78bfa
+        );
+}
+
+.row > div:nth-child(3) .stat-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            #f97316,
+            #fb923c
+        );
+}
+
+.row > div:nth-child(4) .stat-card::before {
+    background:
+        linear-gradient(
+            90deg,
+            #22c55e,
+            #4ade80
+        );
+}
+
+.stat-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-top > span {
+    color: #64748b;
+
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+/* Statistic icons */
+
+.stat-icon {
+    display: grid;
+    width: 47px;
+    height: 47px;
+    place-items: center;
+
+    border-radius: 14px;
+}
+
+.stat-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.icon-blue {
+    color: #2563eb;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+}
+
+.icon-purple {
+    color: #7c3aed;
+    background: linear-gradient(135deg, #ede9fe, #f5f3ff);
+}
+
+.icon-orange {
+    color: #ea580c;
+    background: linear-gradient(135deg, #ffedd5, #fff7ed);
+}
+
+.icon-green {
+    color: #16a34a;
+    background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+}
+
+/* Statistic numbers */
+
+.stat-card h2 {
+    margin: 23px 0 3px;
+
+    color: #172033;
+
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.stat-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 0.84rem;
+}
+
+/* Appointments card */
+
+.content-card {
+    overflow: hidden;
+    margin-top: 27px;
+
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 19px;
+
+    background: white;
+
+    box-shadow:
+        0 16px 38px rgba(15, 23, 42, 0.07);
+}
+
+.content-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 23px;
+
+    border-bottom: 1px solid #edf2f7;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #f7faff
+        );
+}
+
+.content-card-header h2 {
+    margin: 0 0 3px;
+
+    color: #172033;
+
+    font-size: 1.05rem;
+    font-weight: 750;
+}
+
+.content-card-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 0.79rem;
+}
+
+.content-card-header a {
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    color: #2563eb;
+    background: #eff6ff;
+
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease;
+}
+
+.content-card-header a:hover {
+    color: white;
+    background: #2563eb;
+}
+
+/* Appointment table */
+
+.content-card .table {
+    margin-bottom: 0;
+}
+
+.content-card .table th {
+    padding: 14px 22px;
+
+    border: none;
+
+    color: #64748b;
+    background: #f8fafc;
+
+    font-size: 0.72rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.content-card .table td {
+    padding: 17px 22px;
+
+    border-color: #edf2f7;
+
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* Student name and avatar */
+
+.student-cell {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.student-avatar {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    color: #2563eb;
+    background: #dbeafe;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+/* Appointment status */
+
+.dashboard-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 11px;
+
+    border-radius: 30px;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.status-scheduled {
+    color: #1d4ed8;
+    background: #dbeafe;
+}
+
+.status-completed {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.status-cancelled {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.empty-state {
+    padding: 55px 20px !important;
+    color: #94a3b8 !important;
+    text-align: center;
+}
+
+/* Mobile Dashboard */
+
+@media (max-width: 700px) {
+    .dashboard-header {
+        align-items: flex-start;
+        padding: 24px;
+        flex-direction: column;
+        gap: 19px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.85rem;
+    }
+
+    .user-card {
+        width: 100%;
+    }
+
+    .content-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .content-card-header a {
+        width: 100%;
+        text-align: center;
+    }
+}

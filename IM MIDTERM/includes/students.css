@@ -1,0 +1,508 @@
+/* Students heading */
+
+/* Students heading — matches the Dashboard */
+
+.students-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+    padding: 30px 32px;
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 82% 10%,
+            rgba(255, 255, 255, 0.2),
+            transparent 22%
+        ),
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.22);
+}
+
+.students-hero::after {
+    position: absolute;
+    right: -55px;
+    bottom: -100px;
+
+    width: 220px;
+    height: 220px;
+
+    border: 34px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    content: "";
+}
+
+.students-hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.students-hero-icon {
+    display: grid;
+    width: 53px;
+    height: 53px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+
+    color: #2563eb;
+    background: white;
+}
+
+.students-hero-icon svg {
+    width: 27px;
+    height: 27px;
+}
+
+.students-hero h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 6px;
+
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 780;
+    letter-spacing: -1px;
+}
+
+.students-hero p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* Add button */
+
+.add-student-button {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 17px;
+
+    border: none;
+    border-radius: 11px;
+
+    color: #2563eb;
+    background: white;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.16);
+}
+
+.add-student-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.add-student-button:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+
+/* Summary */
+
+.student-summary {
+    display: grid;
+    margin-bottom: 20px;
+    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 17px 19px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.055);
+}
+
+.summary-icon {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+}
+
+.summary-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.blue-summary {
+    color: #2563eb;
+    background: #dbeafe;
+}
+
+.purple-summary {
+    color: #7c3aed;
+    background: #ede9fe;
+}
+
+.summary-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-card span {
+    color: #64748b;
+    font-size: 0.76rem;
+}
+
+.summary-card strong {
+    color: #172033;
+    font-size: 1.45rem;
+}
+
+/* Search */
+
+.student-toolbar {
+    margin-bottom: 20px;
+    padding: 16px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.student-search {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    position: relative;
+    flex: 1;
+}
+
+.search-input svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+
+    width: 18px;
+    height: 18px;
+
+    color: #94a3b8;
+
+    transform: translateY(-50%);
+}
+
+.search-input input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px 10px 43px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 11px;
+
+    outline: none;
+}
+
+.search-input input:focus {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.search-button,
+.clear-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 92px;
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.search-button {
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #3b82f6, #4f46e5);
+}
+
+.clear-button {
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    background: #f8fafc;
+}
+
+/* Student directory */
+
+.students-card {
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.07);
+}
+
+.students-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 19px 21px;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.students-card-header h2 {
+    margin: 0 0 3px;
+
+    color: #172033;
+
+    font-size: 1.03rem;
+    font-weight: 750;
+}
+
+.students-card-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.78rem;
+}
+
+.search-label {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    color: #2563eb;
+    background: #eff6ff;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* Student identity */
+
+.student-identity {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.student-avatar {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    color: #2563eb;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.student-identity > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-identity strong {
+    color: #1e293b;
+}
+
+.student-identity span {
+    color: #94a3b8;
+    font-size: 0.73rem;
+}
+
+.grade-badge {
+    display: inline-flex;
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    color: #7c3aed;
+    background: #ede9fe;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.contact-cell {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.contact-cell svg {
+    width: 15px;
+    height: 15px;
+    color: #64748b;
+}
+
+/* Action buttons */
+
+.student-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.action-button {
+    display: grid;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: white;
+
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.action-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.action-button:hover {
+    transform: translateY(-2px);
+}
+
+.edit-action {
+    border: 1px solid #bfdbfe;
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+.edit-action:hover {
+    color: white;
+    background: #2563eb;
+}
+
+.delete-action {
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    background: #fef2f2;
+}
+
+.delete-action:hover {
+    color: white;
+    background: #dc2626;
+}
+
+/* Empty search result */
+
+.student-empty {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.student-empty svg {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.student-empty h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+.student-empty p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.83rem;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .students-hero {
+        align-items: flex-start;
+        padding: 23px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .add-student-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .student-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .student-search {
+        flex-direction: column;
+    }
+
+    .search-button,
+    .clear-button {
+        width: 100%;
+    }
+
+    .students-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 11px;
+    }
+}

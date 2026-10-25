@@ -1,0 +1,358 @@
+:root {
+    --sidebar-width: 278px;
+    --sidebar-small-width: 86px;
+
+    --sidebar-dark: #0f172a;
+    --sidebar-middle: #162033;
+    --sidebar-light: #1e293b;
+
+    --sidebar-text: #94a3b8;
+    --sidebar-text-light: #e2e8f0;
+
+    --primary: #3b82f6;
+    --primary-dark: #4f46e5;
+}
+
+/* Entire sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    width: var(--sidebar-width);
+    padding: 22px 16px;
+    overflow: hidden;
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(59, 130, 246, 0.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            var(--sidebar-dark),
+            var(--sidebar-middle) 55%,
+            var(--sidebar-light)
+        );
+
+    border-right: 1px solid rgba(148, 163, 184, 0.1);
+
+    box-shadow:
+        10px 0 35px rgba(15, 23, 42, 0.15);
+}
+
+/* Logo area */
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 6px 11px 25px;
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    box-shadow:
+        0 10px 24px rgba(59, 130, 246, 0.3);
+}
+
+.brand-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2.2;
+}
+
+.brand-text {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+}
+
+.brand-text strong {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 750;
+    letter-spacing: 0.6px;
+}
+
+.brand-text span {
+    margin-top: 2px;
+    color: var(--sidebar-text);
+    font-size: 0.76rem;
+}
+
+/* Navigation area */
+
+.sidebar-menu {
+    display: flex;
+    gap: 5px;
+    padding-right: 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* Small scrollbar */
+
+.sidebar-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(148, 163, 184, 0.2);
+}
+
+.menu-label {
+    margin: 8px 13px 11px;
+
+    color: #64748b;
+    font-size: 0.67rem;
+    font-weight: 750;
+    letter-spacing: 1.5px;
+}
+
+/* Sidebar links */
+
+.sidebar-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 46px;
+    padding: 11px 13px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    color: var(--sidebar-text);
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 550;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.sidebar-link svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    stroke-width: 1.9;
+}
+
+.sidebar-link span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Link hover */
+
+.sidebar-link:hover {
+    color: var(--sidebar-text-light);
+
+    border-color: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.065);
+
+    transform: translateX(3px);
+}
+
+/* Current active page */
+
+.sidebar-link.active {
+    color: white;
+
+    border-color: rgba(147, 197, 253, 0.18);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(59, 130, 246, 0.95),
+            rgba(79, 70, 229, 0.95)
+        );
+
+    box-shadow:
+        0 9px 22px rgba(37, 99, 235, 0.25);
+}
+
+.sidebar-link.active::before {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+
+    width: 4px;
+    height: 22px;
+
+    border-radius: 0 8px 8px 0;
+    background: #93c5fd;
+
+    content: "";
+    transform: translateY(-50%);
+}
+
+/* Bottom section */
+
+.sidebar-bottom {
+    display: flex;
+    gap: 8px;
+    padding-top: 14px;
+    flex-shrink: 0;
+    flex-direction: column;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Online status */
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 43px;
+    padding: 10px 13px;
+
+    border: 1px solid rgba(148, 163, 184, 0.08);
+    border-radius: 11px;
+
+    color: var(--sidebar-text);
+    background: rgba(255, 255, 255, 0.035);
+
+    font-size: 0.76rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.13),
+        0 0 12px rgba(34, 197, 94, 0.55);
+}
+
+/* Logout */
+
+.logout-link:hover {
+    color: #fecaca;
+    border-color: rgba(248, 113, 113, 0.1);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Main content position */
+
+.main-content {
+    min-height: 100vh;
+    margin-left: var(--sidebar-width);
+    padding: 36px;
+
+    transition:
+        margin-left 0.25s ease,
+        padding 0.25s ease;
+}
+
+/* Tablet and smaller screens */
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: var(--sidebar-small-width);
+        padding: 20px 12px;
+    }
+
+    .sidebar-brand {
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .brand-text,
+    .menu-label,
+    .sidebar-link span,
+    .system-status span {
+        display: none;
+    }
+
+    .sidebar-link,
+    .system-status {
+        justify-content: center;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .sidebar-link:hover {
+        transform: none;
+    }
+
+    .sidebar-link.active::before {
+        left: -7px;
+    }
+
+    .main-content {
+        margin-left: var(--sidebar-small-width);
+        padding: 28px 22px;
+    }
+}
+
+/* Small phones */
+
+@media (max-width: 520px) {
+    :root {
+        --sidebar-small-width: 74px;
+    }
+
+    .sidebar {
+        padding-right: 9px;
+        padding-left: 9px;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .sidebar-link {
+        min-height: 43px;
+    }
+
+    .main-content {
+        padding: 22px 15px;
+    }
+}
